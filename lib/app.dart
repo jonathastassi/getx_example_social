@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_example_social/app_binding.dart';
 import 'package:getx_example_social/routes.dart';
 
 class App extends StatelessWidget {
@@ -12,6 +13,7 @@ class App extends StatelessWidget {
       ),
       initialRoute: Routes.initialRoute,
       getPages: Routes.pages,
+      initialBinding: AppBinding(),
     );
   }
 }
