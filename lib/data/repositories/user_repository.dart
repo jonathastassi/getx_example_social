@@ -18,7 +18,8 @@ class UserRepository implements IUserRepository {
 
 
       if (response.statusCode == 200) {
-        return Right(response.data
+        final result = response.data as List;
+        return Right(result
             .map((user) => UserModel.fromJson(user))
             .toList());
       }
