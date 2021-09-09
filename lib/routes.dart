@@ -1,15 +1,30 @@
 import 'package:get/get.dart';
-import 'package:getx_example_social/presentation/user/user_list_binding.dart';
-import 'package:getx_example_social/presentation/user/user_list_page.dart';
+import 'package:getx_example_social/presentation/pages/common_binding.dart';
+import 'package:getx_example_social/presentation/pages/home/home_binding.dart';
+import 'package:getx_example_social/presentation/pages/home/home_page.dart';
+import 'package:getx_example_social/presentation/pages/user_detail/user_detail_binding.dart';
+import 'package:getx_example_social/presentation/pages/user_detail/user_detail_page.dart';
+import 'package:getx_example_social/presentation/pages/user_list/user_list_binding.dart';
+import 'package:getx_example_social/presentation/pages/user_list/user_list_page.dart';
 
 class Routes {
-  static final initialRoute = UserListPage.route;
+  static final initialRoute = HomePage.route;
 
   static final pages = [
     GetPage(
+      name: HomePage.route,      
+      page: () => HomePage(),
+      bindings: [HomeBinding()],
+    ),
+    GetPage(
       name: UserListPage.route,
       page: () => UserListPage(),
-      binding: UserListBinding(),
+      bindings: [UserListBinding(),CommonBinding()],
+    ),
+    GetPage(
+      name: UserDetailPage.route,
+      page: () => UserDetailPage(),
+      bindings: [UserDetailBinding()],
     ),
   ];
 }
