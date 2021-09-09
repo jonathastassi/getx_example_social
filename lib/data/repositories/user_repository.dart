@@ -16,12 +16,11 @@ class UserRepository implements IUserRepository {
       final response =
           await httpClient.get('https://jsonplaceholder.typicode.com/users');
 
-
       if (response.statusCode == 200) {
         final result = response.data as List;
-        return Right(result
-            .map((user) => UserModel.fromJson(user))
-            .toList());
+        return Right(
+          result.map((user) => UserModel.fromJson(user)).toList(),
+        );
       }
       return Left(ServerFailure());
     } catch (_) {

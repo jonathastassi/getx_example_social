@@ -17,7 +17,10 @@ class PostRepository implements IPostRepository {
           .get('https://jsonplaceholder.typicode.com/users/$userId/posts');
 
       if (response.statusCode == 200) {
-        return Right(response.data.map((user) => PostModel.fromJson(user)).toList());
+        final result = response.data as List;
+        return Right(
+          result.map((user) => PostModel.fromJson(user)).toList(),
+        );
       }
       return Left(ServerFailure());
     } catch (_) {

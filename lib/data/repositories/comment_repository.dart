@@ -11,13 +11,17 @@ class CommentRepository implements ICommentRepository {
   CommentRepository({required this.httpClient});
 
   @override
-  Future<Either<Failure, List<CommentEntity>>> getListByPostId(int postId) async {
+  Future<Either<Failure, List<CommentEntity>>> getListByPostId(
+      int postId) async {
     try {
       final response = await httpClient
           .get('https://jsonplaceholder.typicode.com/posts/$postId/comments');
 
       if (response.statusCode == 200) {
-        return Right(response.data.map((user) => CommentModel.fromJson(user)).toList());
+        final result = response.data as List;
+        return Right(
+          result.map((user) => CommentModel.fromJson(user)).toList(),
+        );
       }
       return Left(ServerFailure());
     } catch (_) {
