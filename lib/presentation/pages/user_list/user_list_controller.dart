@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 import 'package:getx_example_social/core/usecases/usecase.dart';
 import 'package:getx_example_social/domain/entities/user_entity.dart';
 import 'package:getx_example_social/domain/usecases/user/get_user_list.dart';
+import 'package:getx_example_social/presentation/pages/user_detail/user_detail_page.dart';
 
 class UserListController extends GetxController {
   final GetUserList getUserList;
@@ -31,5 +32,9 @@ class UserListController extends GetxController {
       userList.value = data;
       isLoading.value = false;
     });
+  }
+
+  void openUserDetail(UserEntity user) {
+    Get.toNamed(UserDetailPage.route, arguments: user);
   }
 }

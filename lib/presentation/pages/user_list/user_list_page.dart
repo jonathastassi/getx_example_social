@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_example_social/presentation/user/user_list_controller.dart';
+import 'package:getx_example_social/presentation/pages/user_list/user_list_controller.dart';
+import 'package:getx_example_social/presentation/widgets/drawer_menu.dart';
 
 class UserListPage extends GetView<UserListController> {
   static final String route = '/user-list';
@@ -19,7 +20,6 @@ class UserListPage extends GetView<UserListController> {
 
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.people),
         title: Text('Users'),
         actions: [
           IconButton(onPressed: controller.fetchList, icon: Icon(Icons.refresh))
@@ -33,9 +33,7 @@ class UserListPage extends GetView<UserListController> {
               itemBuilder: (context, index) {
                 final user = controller.userList[index];
                 return ListTile(
-                  onTap: () {
-                    print('eita');
-                  },
+                  onTap: () => controller.openUserDetail(user),
                   leading: CircleAvatar(
                     child: Text(_getInitial(user.name)),
                   ),
@@ -55,6 +53,7 @@ class UserListPage extends GetView<UserListController> {
           ],
         ),
       ),
+      drawer: DrawerMenu(),
     );
   }
 }
