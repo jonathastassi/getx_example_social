@@ -1,16 +1,13 @@
-# getx_example_social
+# GetX Example Social
 
-A new Flutter project.
+Esse é um projeto de exemplo de como utilizar o GetX com conceitos de arquitura limpa.
+O aplicativo possui 2 telas
+- Home - Que é uma tela onde tem 2 botões, um que irá incrementar o valor do contador e outro que irá decrementar, tudo isso usando o esquema de reatividade do GetX.
+    [Link da documentação da reatividade do GetX](https://github.com/jonataslaw/getx/blob/master/documentation/pt_BR/state_management.md)
+- User - É uma tela que exibe uma lista de usuários vindo de uma [API fake](https://jsonplaceholder.typicode.com/), onde ao clicar em um usuário, será buscado em outra API a lista de posts desse comentário e também podendo clicar em cada post, para ver os comentários.
 
-## Getting Started
+É um aplicativo apenas para fins didáticos.
 
-This project is a starting point for a Flutter application.
+## Demonstration
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Demonstration](./demonstration/video.gif)
