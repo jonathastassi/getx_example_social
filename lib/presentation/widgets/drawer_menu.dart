@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_example_social/presentation/pages/home/home_page.dart';
+import 'package:getx_example_social/presentation/pages/todo/todo_list/todo_list_page.dart';
 import 'package:getx_example_social/presentation/pages/user_list/user_list_page.dart';
 
 class DrawerMenu extends Drawer {
@@ -24,6 +25,11 @@ class DrawerMenu extends Drawer {
                 onTap: () => Get.offAllNamed(UserListPage.route),
                 leading: Icon(Icons.people),
                 title: Text('Users'),
+              ),
+              ListTile(
+                onTap: () => Get.offAllNamed(TodoListPage.route),
+                leading: Icon(Icons.check_box_outlined),
+                title: Text('Todo List'),
               ),
             ],
           ),

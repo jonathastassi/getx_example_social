@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 import 'package:getx_example_social/presentation/pages/common_binding.dart';
 import 'package:getx_example_social/presentation/pages/home/home_binding.dart';
 import 'package:getx_example_social/presentation/pages/home/home_page.dart';
+import 'package:getx_example_social/presentation/pages/todo/todo_module.dart';
 import 'package:getx_example_social/presentation/pages/user_detail/user_detail_binding.dart';
 import 'package:getx_example_social/presentation/pages/user_detail/user_detail_page.dart';
 import 'package:getx_example_social/presentation/pages/user_list/user_list_binding.dart';
@@ -26,5 +27,6 @@ class Routes {
       page: () => UserDetailPage(),
       bindings: [UserDetailBinding()],
     ),
+    ...TodoModule().routers
   ];
 }
