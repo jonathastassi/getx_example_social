@@ -26,7 +26,7 @@ class DrawerMenu extends Drawer {
               ListTile(
                 onTap: () => Get.offAllNamed(CounterWithSetState.route),
                 leading: Icon(Icons.home),
-                title: Text('Counter'),
+                title: Text('Counter using seState'),
               ),
               ListTile(
                 onTap: () => Get.offAllNamed(UserListPage.route),
@@ -41,7 +41,7 @@ class DrawerMenu extends Drawer {
               ListTile(
                 onTap: () => Get.offAllNamed(TranslationExamplePage.route),
                 leading: Icon(Icons.g_translate_outlined),
-                title: Text('Todo List'),
+                title: Text('Translation'),
               ),
             ],
           ),
