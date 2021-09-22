@@ -37,6 +37,9 @@ O aplicativo possui 2 telas
 - [Gerenciamento de Dependência](https://github.com/jonataslaw/getx/blob/master/documentation/pt_BR/dependency_management.md)
 
 ---
+## [Utilidades](https://github.com/jonataslaw/getx/blob/master/README.pt-br.md#utilidades)
+
+---
 ## Produtividade
 - [https://github.com/jonataslaw/get_cli](https://github.com/jonataslaw/get_cli)
 

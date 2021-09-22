@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_example_social/presentation/translations/app_translations.dart';
 import 'package:getx_example_social/routes.dart';
 
 class App extends StatelessWidget {
@@ -12,6 +13,8 @@ class App extends StatelessWidget {
       ),
       initialRoute: Routes.initialRoute,
       getPages: Routes.pages,
+      translations: AppTranslation(), // suas traduções
+      locale: Locale('pt', 'BR'), // as traduções serão exibidas para esta localidade
     );
   }
 }

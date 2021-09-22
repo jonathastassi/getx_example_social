@@ -4,6 +4,7 @@ import 'package:getx_example_social/presentation/pages/counter_with_set_state/co
 import 'package:getx_example_social/presentation/pages/home/home_binding.dart';
 import 'package:getx_example_social/presentation/pages/home/home_page.dart';
 import 'package:getx_example_social/presentation/pages/todo/todo_module.dart';
+import 'package:getx_example_social/presentation/pages/translation_example/translation_example_page.dart';
 import 'package:getx_example_social/presentation/pages/user_detail/user_detail_binding.dart';
 import 'package:getx_example_social/presentation/pages/user_detail/user_detail_page.dart';
 import 'package:getx_example_social/presentation/pages/user_list/user_list_binding.dart';
@@ -14,24 +15,28 @@ class Routes {
 
   static final pages = [
     GetPage(
-      name: HomePage.route,      
+      name: HomePage.route,
       page: () => HomePage(),
       bindings: [HomeBinding()],
     ),
     GetPage(
-      name: CounterWithSetState.route,      
+      name: CounterWithSetState.route,
       page: () => CounterWithSetState(),
     ),
     GetPage(
       name: UserListPage.route,
       page: () => UserListPage(),
-      bindings: [UserListBinding(),CommonBinding()],
+      bindings: [UserListBinding(), CommonBinding()],
     ),
     GetPage(
       name: UserDetailPage.route,
       page: () => UserDetailPage(),
       bindings: [UserDetailBinding()],
     ),
-    ...TodoModule().routers
+    ...TodoModule().routers,
+    GetPage(
+      name: TranslationExamplePage.route,
+      page: () => TranslationExamplePage(),
+    )
   ];
 }
