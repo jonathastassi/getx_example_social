@@ -4,7 +4,7 @@ import 'package:getx_example_social/presentation/widgets/drawer_menu.dart';
 class CounterWithSetState extends StatefulWidget {
   static final String route = '/counter-with-set-state';
 
-  const CounterWithSetState({ Key? key }) : super(key: key);
+  const CounterWithSetState({Key? key}) : super(key: key);
 
   @override
   _CounterWithSetStateState createState() => _CounterWithSetStateState();
@@ -32,7 +32,12 @@ class _CounterWithSetStateState extends State<CounterWithSetState> {
         title: Text('Counter with setState'),
       ),
       body: Center(
-        child: Text(counter.toString()),
+        child: Text(
+          counter.toString(),
+          style: TextStyle(
+            fontSize: 50,
+          ),
+        ),
       ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.only(
