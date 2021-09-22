@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_example_social/presentation/pages/counter_with_set_state/counter_with_set_state_page.dart';
 import 'package:getx_example_social/presentation/pages/home/home_page.dart';
 import 'package:getx_example_social/presentation/pages/todo/todo_list/todo_list_page.dart';
 import 'package:getx_example_social/presentation/pages/user_list/user_list_page.dart';
@@ -17,9 +18,14 @@ class DrawerMenu extends Drawer {
                 accountEmail: Text('jonathastassi@hotmail.com'),
               ),
               ListTile(
-                onTap: () => Get.offAllNamed(HomePage.route),
+                onTap: () => Get.offAllNamed(HomePage.route), 
                 leading: Icon(Icons.home),
                 title: Text('Home'),
+              ),
+              ListTile(
+                onTap: () => Get.offAllNamed(CounterWithSetState.route), 
+                leading: Icon(Icons.home),
+                title: Text('Counter'),
               ),
               ListTile(
                 onTap: () => Get.offAllNamed(UserListPage.route),

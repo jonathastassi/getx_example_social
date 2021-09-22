@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:getx_example_social/presentation/pages/common_binding.dart';
+import 'package:getx_example_social/presentation/pages/counter_with_set_state/counter_with_set_state_page.dart';
 import 'package:getx_example_social/presentation/pages/home/home_binding.dart';
 import 'package:getx_example_social/presentation/pages/home/home_page.dart';
 import 'package:getx_example_social/presentation/pages/todo/todo_module.dart';
@@ -16,6 +17,10 @@ class Routes {
       name: HomePage.route,      
       page: () => HomePage(),
       bindings: [HomeBinding()],
+    ),
+    GetPage(
+      name: CounterWithSetState.route,      
+      page: () => CounterWithSetState(),
     ),
     GetPage(
       name: UserListPage.route,
