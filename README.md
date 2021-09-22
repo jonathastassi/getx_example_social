@@ -48,3 +48,5 @@ O aplicativo possui 2 telas
     - [Snippets para VS Code](https://marketplace.visualstudio.com/items?itemName=get-snippets.get-snippets)
 - [EKKO Boilerplate](https://github.com/Katekko/ekko_app)
 
+---
+## [Comunidade](https://pub.dev/packages/get#community)
